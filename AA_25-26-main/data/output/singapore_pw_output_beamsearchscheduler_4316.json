@@ -1,0 +1,274 @@
+{
+    "scheduled_programs": [
+        {
+            "program_id": "369757_sky_news_today_2026-01-04_0060",
+            "channel_id": 25,
+            "start": 60,
+            "end": 90
+        },
+        {
+            "program_id": "369844_anupamaa_2026-01-04_0090",
+            "channel_id": 73,
+            "start": 90,
+            "end": 120
+        },
+        {
+            "program_id": "369849_itti_si_khushi_2026-01-04_0120",
+            "channel_id": 76,
+            "start": 120,
+            "end": 150
+        },
+        {
+            "program_id": "369737_sports_woman_2026-01-04_0150",
+            "channel_id": 14,
+            "start": 150,
+            "end": 180
+        },
+        {
+            "program_id": "369737_tennis_stars_2026-01-04_0180",
+            "channel_id": 14,
+            "start": 180,
+            "end": 210
+        },
+        {
+            "program_id": "369737_sports_woman_2026-01-04_0210",
+            "channel_id": 14,
+            "start": 210,
+            "end": 240
+        },
+        {
+            "program_id": "369737_tennis_stars_2026-01-04_0240",
+            "channel_id": 14,
+            "start": 240,
+            "end": 270
+        },
+        {
+            "program_id": "369737_foul_play_2026-01-04_0270",
+            "channel_id": 14,
+            "start": 270,
+            "end": 300
+        },
+        {
+            "program_id": "412192_free_ticket_2026-01-04_0300",
+            "channel_id": 165,
+            "start": 300,
+            "end": 330
+        },
+        {
+            "program_id": "412192_free_ticket_2026-01-04_0330",
+            "channel_id": 165,
+            "start": 330,
+            "end": 360
+        },
+        {
+            "program_id": "412109_the_world_today_2026-01-04_0360",
+            "channel_id": 98,
+            "start": 360,
+            "end": 390
+        },
+        {
+            "program_id": "412103_chirikkum_thalika_ii_2026-01-04_0390",
+            "channel_id": 94,
+            "start": 390,
+            "end": 420
+        },
+        {
+            "program_id": "369757_news_at_10_with_gillian__2026-01-04_0420",
+            "channel_id": 25,
+            "start": 420,
+            "end": 450
+        },
+        {
+            "program_id": "369757_press_preview_2026-01-04_0450",
+            "channel_id": 25,
+            "start": 450,
+            "end": 480
+        },
+        {
+            "program_id": "369737_sports_woman_2026-01-04_0480",
+            "channel_id": 14,
+            "start": 480,
+            "end": 510
+        },
+        {
+            "program_id": "412115_zee_flix_2026-01-04_0510",
+            "channel_id": 102,
+            "start": 510,
+            "end": 540
+        },
+        {
+            "program_id": "412157_abc_news_2026_2026-01-04_0540",
+            "channel_id": 137,
+            "start": 540,
+            "end": 570
+        },
+        {
+            "program_id": "369784_match_highlights_25_26_m_2026-01-04_0570",
+            "channel_id": 40,
+            "start": 570,
+            "end": 600
+        },
+        {
+            "program_id": "412092_alexander_stubb_presiden_2026-01-04_0600",
+            "channel_id": 84,
+            "start": 600,
+            "end": 630
+        },
+        {
+            "program_id": "369848_oshi_no_ko_new_eps_2026-01-04_0630",
+            "channel_id": 75,
+            "start": 630,
+            "end": 660
+        },
+        {
+            "program_id": "412103_chirikkum_thalika_ii_2026-01-04_0660",
+            "channel_id": 94,
+            "start": 660,
+            "end": 690
+        },
+        {
+            "program_id": "412109_inheritors_2026-01-04_0690",
+            "channel_id": 98,
+            "start": 690,
+            "end": 720
+        },
+        {
+            "program_id": "412187_2025_26_alm_mini_match_r_2026-01-04_0720",
+            "channel_id": 160,
+            "start": 720,
+            "end": 750
+        },
+        {
+            "program_id": "412178_docfilm_2026-01-04_0750",
+            "channel_id": 151,
+            "start": 750,
+            "end": 780
+        },
+        {
+            "program_id": "369813_cnbc_sports_2026-01-04_0780",
+            "channel_id": 55,
+            "start": 780,
+            "end": 810
+        },
+        {
+            "program_id": "369813_cnbc_sports_2026-01-04_0810",
+            "channel_id": 55,
+            "start": 810,
+            "end": 840
+        },
+        {
+            "program_id": "369737_chill_2026-01-04_0840",
+            "channel_id": 14,
+            "start": 840,
+            "end": 870
+        },
+        {
+            "program_id": "369737_foul_play_2026-01-04_0870",
+            "channel_id": 14,
+            "start": 870,
+            "end": 900
+        },
+        {
+            "program_id": "369737_the_iconic_2026-01-04_0900",
+            "channel_id": 14,
+            "start": 900,
+            "end": 930
+        },
+        {
+            "program_id": "369737_sports_woman_2026-01-04_0930",
+            "channel_id": 14,
+            "start": 930,
+            "end": 960
+        },
+        {
+            "program_id": "412197_fashion_films_2026-01-04_0960",
+            "channel_id": 169,
+            "start": 960,
+            "end": 990
+        },
+        {
+            "program_id": "412197_fashion_films_2026-01-04_0990",
+            "channel_id": 169,
+            "start": 990,
+            "end": 1020
+        },
+        {
+            "program_id": "412197_fashion_teens_2026-01-04_1020",
+            "channel_id": 169,
+            "start": 1020,
+            "end": 1050
+        },
+        {
+            "program_id": "412197_fashion_teens_2026-01-04_1050",
+            "channel_id": 169,
+            "start": 1050,
+            "end": 1080
+        },
+        {
+            "program_id": "412135_news_treasury_2024_2026-01-04_1080",
+            "channel_id": 117,
+            "start": 1080,
+            "end": 1110
+        },
+        {
+            "program_id": "412165_rabat_2023_episode_1_2026-01-04_1110",
+            "channel_id": 142,
+            "start": 1110,
+            "end": 1140
+        },
+        {
+            "program_id": "369757_sky_news_today_with_matt_2026-01-04_1140",
+            "channel_id": 25,
+            "start": 1140,
+            "end": 1170
+        },
+        {
+            "program_id": "369757_sky_news_today_with_matt_2026-01-04_1170",
+            "channel_id": 25,
+            "start": 1170,
+            "end": 1200
+        },
+        {
+            "program_id": "369827_mega_fights_in_60_2026-01-04_1200",
+            "channel_id": 64,
+            "start": 1200,
+            "end": 1230
+        },
+        {
+            "program_id": "369757_sky_news_today_with_matt_2026-01-04_1230",
+            "channel_id": 25,
+            "start": 1230,
+            "end": 1260
+        },
+        {
+            "program_id": "412145_phoenix_focus_4_1_26_2026-01-04_1260",
+            "channel_id": 126,
+            "start": 1260,
+            "end": 1290
+        },
+        {
+            "program_id": "412103_chirikkum_thalika_ii_2026-01-04_1290",
+            "channel_id": 94,
+            "start": 1290,
+            "end": 1320
+        },
+        {
+            "program_id": "435717_engile_ennodu_para_2026-01-04_1320",
+            "channel_id": 182,
+            "start": 1320,
+            "end": 1350
+        },
+        {
+            "program_id": "369760_french_gourmet_with_just_2026-01-04_1350",
+            "channel_id": 27,
+            "start": 1350,
+            "end": 1380
+        },
+        {
+            "program_id": "412151_ep_10_heidelburg_materia_2026-01-04_1380",
+            "channel_id": 132,
+            "start": 1380,
+            "end": 1410
+        }
+    ]
+}
