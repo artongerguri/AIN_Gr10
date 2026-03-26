@@ -1,0 +1,286 @@
+{
+    "scheduled_programs": [
+        {
+            "program_id": "324_es_not_cies_3catinfo_2026-01-04_0000",
+            "channel_id": 2,
+            "start": 0,
+            "end": 30
+        },
+        {
+            "program_id": "324_es_not_cies_3catinfo_2026-01-04_0030",
+            "channel_id": 2,
+            "start": 30,
+            "end": 60
+        },
+        {
+            "program_id": "populartvmurcia_es_gu_a_de_cine_2026-01-04_0060",
+            "channel_id": 211,
+            "start": 60,
+            "end": 90
+        },
+        {
+            "program_id": "france24_fr_es_le_journal_de_la_can_2026-01-04_0090",
+            "channel_id": 100,
+            "start": 90,
+            "end": 120
+        },
+        {
+            "program_id": "24horas_es_telediario_internacional_2026-01-04_0120",
+            "channel_id": 1,
+            "start": 120,
+            "end": 150
+        },
+        {
+            "program_id": "bloomberg_es_emma_barnett_meets_2026-01-04_0150",
+            "channel_id": 35,
+            "start": 150,
+            "end": 180
+        },
+        {
+            "program_id": "24horas_es_telediario_internacional_2026-01-04_0180",
+            "channel_id": 1,
+            "start": 180,
+            "end": 210
+        },
+        {
+            "program_id": "deutschewelle_es_docfilm_dw_2026-01-04_0210",
+            "channel_id": 75,
+            "start": 210,
+            "end": 240
+        },
+        {
+            "program_id": "24horas_es_telediario_internacional_2026-01-04_0240",
+            "channel_id": 1,
+            "start": 240,
+            "end": 270
+        },
+        {
+            "program_id": "aljazeeraenglish_e_counting_the_cost_2026-01-04_0270",
+            "channel_id": 12,
+            "start": 270,
+            "end": 300
+        },
+        {
+            "program_id": "24horas_es_telediario_internacional_2026-01-04_0300",
+            "channel_id": 1,
+            "start": 300,
+            "end": 330
+        },
+        {
+            "program_id": "telesur_es_telesur_noticias_2026-01-04_0330",
+            "channel_id": 255,
+            "start": 330,
+            "end": 360
+        },
+        {
+            "program_id": "24horas_es_telediario_internacional_2026-01-04_0360",
+            "channel_id": 1,
+            "start": 360,
+            "end": 390
+        },
+        {
+            "program_id": "cnnint_es_world_sport_2026-01-04_0390",
+            "channel_id": 43,
+            "start": 390,
+            "end": 420
+        },
+        {
+            "program_id": "aljazeeraenglish_e_news_live_2026-01-04_0420",
+            "channel_id": 12,
+            "start": 420,
+            "end": 450
+        },
+        {
+            "program_id": "recordtv_es_nosso_tempo_2026-01-04_0450",
+            "channel_id": 224,
+            "start": 450,
+            "end": 480
+        },
+        {
+            "program_id": "m_deportes_es_oxer_h_pica_highlights_r_2026-01-04_0480",
+            "channel_id": 136,
+            "start": 480,
+            "end": 510
+        },
+        {
+            "program_id": "canalcocina_es_blanca_navidad_2026-01-04_0510",
+            "channel_id": 47,
+            "start": 510,
+            "end": 540
+        },
+        {
+            "program_id": "laligasmartbanktv__laliga_vs_24_25_jes_s_ga_2026-01-04_0540",
+            "channel_id": 121,
+            "start": 540,
+            "end": 570
+        },
+        {
+            "program_id": "laligasmartbanktv__laliga_hypermotion_t25_2_2026-01-04_0570",
+            "channel_id": 121,
+            "start": 570,
+            "end": 600
+        },
+        {
+            "program_id": "aljazeeraenglish_e_news_live_2026-01-04_0600",
+            "channel_id": 12,
+            "start": 600,
+            "end": 630
+        },
+        {
+            "program_id": "cnbc_es_cnbc_sports_2026-01-04_0630",
+            "channel_id": 41,
+            "start": 630,
+            "end": 660
+        },
+        {
+            "program_id": "telesur_es_sala_a_2026-01-04_0660",
+            "channel_id": 255,
+            "start": 660,
+            "end": 690
+        },
+        {
+            "program_id": "tvchile_es_infomercial_2026-01-04_0690",
+            "channel_id": 242,
+            "start": 690,
+            "end": 720
+        },
+        {
+            "program_id": "movistarellasvamos_world_rugby_sevens_serie_2026-01-04_0720",
+            "channel_id": 195,
+            "start": 720,
+            "end": 750
+        },
+        {
+            "program_id": "aljazeeraenglish_e_inside_story_2026-01-04_0750",
+            "channel_id": 12,
+            "start": 750,
+            "end": 780
+        },
+        {
+            "program_id": "laligatvbar_es_especiales_laliga_fin_de_2026-01-04_0750",
+            "channel_id": 124,
+            "start": 780,
+            "end": 810
+        },
+        {
+            "program_id": "telesur_es_telesur_noticias_2026-01-04_0810",
+            "channel_id": 255,
+            "start": 810,
+            "end": 840
+        },
+        {
+            "program_id": "telesur_es_realidades_2026-01-04_0840",
+            "channel_id": 255,
+            "start": 840,
+            "end": 870
+        },
+        {
+            "program_id": "bloomberg_es_athlete_2026-01-04_0870",
+            "channel_id": 35,
+            "start": 870,
+            "end": 900
+        },
+        {
+            "program_id": "telecinco_es_informativos_telecinco_f_2026-01-04_0900",
+            "channel_id": 251,
+            "start": 900,
+            "end": 930
+        },
+        {
+            "program_id": "bbclifestyle_es_antiques_roadshow_2026-01-04_0906",
+            "channel_id": 25,
+            "start": 930,
+            "end": 960
+        },
+        {
+            "program_id": "populartvmurcia_es_cine_y_fe_2026-01-04_0960",
+            "channel_id": 211,
+            "start": 960,
+            "end": 990
+        },
+        {
+            "program_id": "324_es_not_cies_3catinfo_2026-01-04_0990",
+            "channel_id": 2,
+            "start": 990,
+            "end": 1020
+        },
+        {
+            "program_id": "aljazeeraenglish_e_news_live_2026-01-04_1020",
+            "channel_id": 12,
+            "start": 1020,
+            "end": 1050
+        },
+        {
+            "program_id": "bloomberg_es_business_of_sports_2026-01-04_1050",
+            "channel_id": 35,
+            "start": 1050,
+            "end": 1080
+        },
+        {
+            "program_id": "aljazeeraenglish_e_news_live_2026-01-04_1080",
+            "channel_id": 12,
+            "start": 1080,
+            "end": 1110
+        },
+        {
+            "program_id": "324_es_not_cies_3catinfo_2026-01-04_1110",
+            "channel_id": 2,
+            "start": 1110,
+            "end": 1140
+        },
+        {
+            "program_id": "tvchile_es_infomercial_2026-01-04_1140",
+            "channel_id": 242,
+            "start": 1140,
+            "end": 1170
+        },
+        {
+            "program_id": "bbcworld_es_shock_treatment_the_gay__2026-01-04_1170",
+            "channel_id": 28,
+            "start": 1170,
+            "end": 1200
+        },
+        {
+            "program_id": "tvchile_es_chile_conectado_2026-01-04_1200",
+            "channel_id": 242,
+            "start": 1200,
+            "end": 1230
+        },
+        {
+            "program_id": "canaldecasa_es_minipisos_asombrosos_2026-01-04_1230",
+            "channel_id": 48,
+            "start": 1230,
+            "end": 1260
+        },
+        {
+            "program_id": "aljazeeraenglish_e_news_live_2026-01-04_1260",
+            "channel_id": 12,
+            "start": 1260,
+            "end": 1290
+        },
+        {
+            "program_id": "tvcanaria_es_telenoticias_fin_de_sema_2026-01-04_1290",
+            "channel_id": 241,
+            "start": 1290,
+            "end": 1320
+        },
+        {
+            "program_id": "m_ligadecampeones__magazine_champions_leagu_2026-01-04_1320",
+            "channel_id": 162,
+            "start": 1320,
+            "end": 1350
+        },
+        {
+            "program_id": "telesur_es_telesur_noticias_2026-01-04_1350",
+            "channel_id": 255,
+            "start": 1350,
+            "end": 1380
+        },
+        {
+            "program_id": "la1catalunya_es_la_pelicula_de_la_semana_2026-01-04_1320",
+            "channel_id": 118,
+            "start": 1380,
+            "end": 1410
+        }
+    ]
+}
