@@ -90,3 +90,5 @@ python3 main.py --algorithm sa --iterations 200 --sa-steps 160 --temperature 120
 * `--temperature`: Temperatura fillestare për `sa`
 * `--cooling-rate`: Shpejtësia e ftohjes për `sa`
 * `--sa-steps`: Numri i lëvizjeve të fqinjësisë brenda një iteracioni `sa`
+=======
+# AIN_Gr10
