@@ -1,0 +1,268 @@
+{
+    "scheduled_programs": [
+        {
+            "program_id": "470534_the_big_fight_2026-01-04_0060",
+            "channel_id": 245,
+            "start": 60,
+            "end": 90
+        },
+        {
+            "program_id": "470879_schitt_s_creek_2026-01-04_0090",
+            "channel_id": 590,
+            "start": 90,
+            "end": 120
+        },
+        {
+            "program_id": "470463_live_sports_30_2026-01-04_0120",
+            "channel_id": 175,
+            "start": 120,
+            "end": 150
+        },
+        {
+            "program_id": "470546_tni_children_s_series_2026-01-04_0150",
+            "channel_id": 257,
+            "start": 150,
+            "end": 180
+        },
+        {
+            "program_id": "470663_live_inside_college_bask_2026-01-04_0180",
+            "channel_id": 374,
+            "start": 180,
+            "end": 210
+        },
+        {
+            "program_id": "470624_virage_extr_me_2026-01-04_0210",
+            "channel_id": 335,
+            "start": 210,
+            "end": 240
+        },
+        {
+            "program_id": "470362_convoi_sous_z_ro_2026-01-04_0240",
+            "channel_id": 74,
+            "start": 240,
+            "end": 270
+        },
+        {
+            "program_id": "470887_live_premier_league_goal_2026-01-04_0270",
+            "channel_id": 598,
+            "start": 270,
+            "end": 300
+        },
+        {
+            "program_id": "470316_scooby_doo_and_guess_who_2026-01-04_0300",
+            "channel_id": 28,
+            "start": 300,
+            "end": 330
+        },
+        {
+            "program_id": "470621_live_cp24_dayside_2026-01-04_0330",
+            "channel_id": 332,
+            "start": 330,
+            "end": 360
+        },
+        {
+            "program_id": "470346_live_l_info_maintenant_2026-01-04_0360",
+            "channel_id": 58,
+            "start": 360,
+            "end": 390
+        },
+        {
+            "program_id": "470476_faith_alive_2026-01-04_0390",
+            "channel_id": 188,
+            "start": 390,
+            "end": 420
+        },
+        {
+            "program_id": "470695_live_cbc_newsroom_with_d_2026-01-04_0420",
+            "channel_id": 406,
+            "start": 420,
+            "end": 450
+        },
+        {
+            "program_id": "470467_cheers_2026-01-04_0450",
+            "channel_id": 179,
+            "start": 450,
+            "end": 480
+        },
+        {
+            "program_id": "470627_live_nhl_postgame_2026-01-04_0480",
+            "channel_id": 338,
+            "start": 480,
+            "end": 510
+        },
+        {
+            "program_id": "470659_atn_s_tribute_to_100_yea_2026-01-04_0510",
+            "channel_id": 370,
+            "start": 510,
+            "end": 540
+        },
+        {
+            "program_id": "470366_live_raptors_game_day_2026-01-04_0540",
+            "channel_id": 78,
+            "start": 540,
+            "end": 570
+        },
+        {
+            "program_id": "470648_live_nfl_countdown_2026-01-04_0570",
+            "channel_id": 359,
+            "start": 570,
+            "end": 600
+        },
+        {
+            "program_id": "470621_live_cp24_nightside_2026-01-04_0600",
+            "channel_id": 332,
+            "start": 600,
+            "end": 630
+        },
+        {
+            "program_id": "470459_divergent_2026-01-04_0480",
+            "channel_id": 171,
+            "start": 630,
+            "end": 660
+        },
+        {
+            "program_id": "470695_live_cbc_newsroom_with_d_2026-01-04_0660",
+            "channel_id": 406,
+            "start": 660,
+            "end": 690
+        },
+        {
+            "program_id": "470578_live_avant_match_lnh_2026-01-04_0690",
+            "channel_id": 289,
+            "start": 690,
+            "end": 720
+        },
+        {
+            "program_id": "470415_live_news_2026-01-04_0720",
+            "channel_id": 127,
+            "start": 720,
+            "end": 750
+        },
+        {
+            "program_id": "470915_live_nfl_football_2026-01-04_0750",
+            "channel_id": 626,
+            "start": 750,
+            "end": 780
+        },
+        {
+            "program_id": "470733_live_ctv_national_news_w_2026-01-04_0780",
+            "channel_id": 444,
+            "start": 780,
+            "end": 810
+        },
+        {
+            "program_id": "470671_mr_d_2026-01-04_0810",
+            "channel_id": 382,
+            "start": 810,
+            "end": 840
+        },
+        {
+            "program_id": "470415_live_news_2026-01-04_0840",
+            "channel_id": 127,
+            "start": 840,
+            "end": 870
+        },
+        {
+            "program_id": "470585_raceweek_2026-01-04_0870",
+            "channel_id": 296,
+            "start": 870,
+            "end": 900
+        },
+        {
+            "program_id": "470817_live_after_hours_2026-01-04_0900",
+            "channel_id": 528,
+            "start": 900,
+            "end": 930
+        },
+        {
+            "program_id": "470879_schitt_s_creek_2026-01-04_0930",
+            "channel_id": 590,
+            "start": 930,
+            "end": 960
+        },
+        {
+            "program_id": "470874_friends_2026-01-04_0960",
+            "channel_id": 585,
+            "start": 960,
+            "end": 990
+        },
+        {
+            "program_id": "470874_friends_2026-01-04_0990",
+            "channel_id": 585,
+            "start": 990,
+            "end": 1020
+        },
+        {
+            "program_id": "470307_american_greed_2026-01-04_1020",
+            "channel_id": 19,
+            "start": 1022,
+            "end": 1057
+        },
+        {
+            "program_id": "470658_entourage_2026-01-04_1060",
+            "channel_id": 369,
+            "start": 1060,
+            "end": 1100
+        },
+        {
+            "program_id": "470403_from_the_world_of_john_w_2026-01-04_1005",
+            "channel_id": 115,
+            "start": 1100,
+            "end": 1130
+        },
+        {
+            "program_id": "470301_trending_now_2026-01-04_1140",
+            "channel_id": 13,
+            "start": 1140,
+            "end": 1170
+        },
+        {
+            "program_id": "470301_nightline_2026-01-04_1170",
+            "channel_id": 13,
+            "start": 1170,
+            "end": 1200
+        },
+        {
+            "program_id": "470339_sports_30_2026-01-04_1200",
+            "channel_id": 51,
+            "start": 1200,
+            "end": 1230
+        },
+        {
+            "program_id": "470621_cp24_hot_property_2026-01-04_1230",
+            "channel_id": 332,
+            "start": 1230,
+            "end": 1260
+        },
+        {
+            "program_id": "470301_a_word_for_today_2026-01-04_1260",
+            "channel_id": 13,
+            "start": 1260,
+            "end": 1290
+        },
+        {
+            "program_id": "470440_lakefront_luxury_2026-01-04_1290",
+            "channel_id": 152,
+            "start": 1290,
+            "end": 1320
+        },
+        {
+            "program_id": "470345_faith_to_live_by_2026-01-04_1320",
+            "channel_id": 57,
+            "start": 1320,
+            "end": 1350
+        },
+        {
+            "program_id": "470297_the_littlest_hobo_2026-01-04_1350",
+            "channel_id": 9,
+            "start": 1350,
+            "end": 1380
+        },
+        {
+            "program_id": "470329_entertainment_tonight_2026-01-04_1350",
+            "channel_id": 41,
+            "start": 1380,
+            "end": 1410
+        }
+    ]
+}

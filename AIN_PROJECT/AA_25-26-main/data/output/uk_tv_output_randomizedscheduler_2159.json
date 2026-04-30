@@ -1,0 +1,166 @@
+{
+    "scheduled_programs": [
+        {
+            "program_id": "Channel_74_0",
+            "channel_id": 74,
+            "start": 480,
+            "end": 510
+        },
+        {
+            "program_id": "Channel_49_1",
+            "channel_id": 49,
+            "start": 510,
+            "end": 540
+        },
+        {
+            "program_id": "Channel_111_1",
+            "channel_id": 111,
+            "start": 540,
+            "end": 570
+        },
+        {
+            "program_id": "Channel_72_1",
+            "channel_id": 72,
+            "start": 570,
+            "end": 600
+        },
+        {
+            "program_id": "Channel_68_2",
+            "channel_id": 68,
+            "start": 600,
+            "end": 630
+        },
+        {
+            "program_id": "Channel_27_3",
+            "channel_id": 27,
+            "start": 630,
+            "end": 660
+        },
+        {
+            "program_id": "Channel_51_2",
+            "channel_id": 51,
+            "start": 660,
+            "end": 690
+        },
+        {
+            "program_id": "Channel_72_4",
+            "channel_id": 72,
+            "start": 690,
+            "end": 720
+        },
+        {
+            "program_id": "Channel_4_3",
+            "channel_id": 3,
+            "start": 720,
+            "end": 750
+        },
+        {
+            "program_id": "Channel_78_6",
+            "channel_id": 78,
+            "start": 780,
+            "end": 810
+        },
+        {
+            "program_id": "Film4_4",
+            "channel_id": 17,
+            "start": 810,
+            "end": 840
+        },
+        {
+            "program_id": "Dave_7",
+            "channel_id": 12,
+            "start": 840,
+            "end": 870
+        },
+        {
+            "program_id": "Channel_61_7",
+            "channel_id": 61,
+            "start": 870,
+            "end": 900
+        },
+        {
+            "program_id": "Channel_44_7",
+            "channel_id": 44,
+            "start": 900,
+            "end": 930
+        },
+        {
+            "program_id": "Channel_23_6",
+            "channel_id": 23,
+            "start": 930,
+            "end": 960
+        },
+        {
+            "program_id": "Channel_33_9",
+            "channel_id": 33,
+            "start": 960,
+            "end": 990
+        },
+        {
+            "program_id": "Channel_79_7",
+            "channel_id": 79,
+            "start": 990,
+            "end": 1020
+        },
+        {
+            "program_id": "Channel_26_8",
+            "channel_id": 26,
+            "start": 1020,
+            "end": 1050
+        },
+        {
+            "program_id": "Channel_20_6",
+            "channel_id": 20,
+            "start": 1050,
+            "end": 1080
+        },
+        {
+            "program_id": "Channel_23_8",
+            "channel_id": 23,
+            "start": 1080,
+            "end": 1110
+        },
+        {
+            "program_id": "Channel_75_9",
+            "channel_id": 75,
+            "start": 1110,
+            "end": 1140
+        },
+        {
+            "program_id": "Channel_105_13",
+            "channel_id": 105,
+            "start": 1140,
+            "end": 1170
+        },
+        {
+            "program_id": "Channel_65_10",
+            "channel_id": 65,
+            "start": 1170,
+            "end": 1200
+        },
+        {
+            "program_id": "BBC_One_10",
+            "channel_id": 0,
+            "start": 1200,
+            "end": 1245
+        },
+        {
+            "program_id": "BBC_One_11",
+            "channel_id": 0,
+            "start": 1245,
+            "end": 1275
+        },
+        {
+            "program_id": "Channel_5_12",
+            "channel_id": 4,
+            "start": 1275,
+            "end": 1335
+        },
+        {
+            "program_id": "BBC_Two_11",
+            "channel_id": 1,
+            "start": 1350,
+            "end": 1380
+        }
+    ]
+}
