@@ -1,0 +1,5 @@
+instance,config,ga_best,ga_ls_best,best_gain,runs
+canada_pw,Default,4780,4784,4,10
+canada_pw,Explorues,4778,4787,9,10
+canada_pw,Intensiv,4778,4785,7,10
+canada_pw,Balancuar,4782,4784,2,10

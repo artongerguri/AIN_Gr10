@@ -1,0 +1,5 @@
+instance,config,ga_best,ga_ls_best,best_gain,runs
+us_iptv,Default,4576,4577,1,10
+us_iptv,Explorues,4583,4585,2,10
+us_iptv,Intensiv,4583,4583,0,10
+us_iptv,Balancuar,4588,4588,0,10

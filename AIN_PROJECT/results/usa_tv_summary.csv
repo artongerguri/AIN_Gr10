@@ -1,0 +1,5 @@
+instance,config,ga_best,ga_ls_best,best_gain,runs
+usa_tv,Default,3576,3578,2,10
+usa_tv,Explorues,3578,3578,0,10
+usa_tv,Intensiv,3578,3579,1,10
+usa_tv,Balancuar,3576,3578,2,10

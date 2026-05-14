@@ -1,0 +1,5 @@
+instance,config,ga_best,ga_ls_best,best_gain,runs
+toy,Default,510,510,0,10
+toy,Explorues,510,510,0,10
+toy,Intensiv,510,510,0,10
+toy,Balancuar,510,510,0,10
