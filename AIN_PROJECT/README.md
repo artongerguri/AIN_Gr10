@@ -49,8 +49,10 @@ gjeneratash):
    e popullatës (ose `elite_fraction` i dhënë). Cikli vazhdon deri në skadimin e
    kohës ose **stagnacion** (`stale_lim` gjenerata pa përmirësim — shih
    `PARAMETRAT_GA.md`, §8–9).
-4. **`_final_polish()`**: në rezervën e fundit (**~4 s**) polishing me disa raunde
-   destroy–rebuild mbi zgjidhjen më të mirë.
+4. **`_local_search()` pas GA-së**: zgjidhja më e mirë e GA-së ruhet fillimisht si
+   **GA result**, pastaj përmirësohet me Local Search të kufizuar me kohë
+   (`--ls-budget`, default 30 s në eksperimente). Rezultati final raportohet si
+   **GA+LS**, bashkë me diferencën `improvement = GA+LS − GA`.
 
 Fitness-i është **maksimizim** i `total_score` (shuma e segmentëve: score programi,
 bonus preferencash, minus penalitete switch/termination). Shpjegim i plotë:
@@ -84,31 +86,29 @@ seksionet A–D në `PARAMETRAT_GA.md`.
 ## Ekzekutimi
 
 ```bash
-# Ekzekutim i vetëm (shënim: default-et e main.py NUK janë të njëjta me PARAMETRAT_GA;
-# për vlera si në dokument / eksperimente, përdorni flag-et eksplicite më poshtë)
+# Ekzekutim i vetëm me konfigurimin Default të dokumentuar
 python main.py --input data/input/toy.json
 
-# Vlera në përputhje me linjën bazë të dokumentuar (population 60, Pc/Pm/tournament si në PARAMETRAT_GA)
+# E njëjta linjë bazë, me seed eksplicit për riprodhueshmëri
 python main.py --input data/input/canada_pw.json \
-    --ga-population 60 \
-    --ga-crossover-rate 0.55 \
-    --ga-mutation-rate 0.50 \
-    --ga-tournament 5 \
-    --ga-elite 12 \
     --time-limit 300 \
+    --ls-budget 30 \
     --seed 42
 
-# Eksperimentet (4 konfigurime fikse; shih seksionin "Eksperimentet")
+# Eksperimentet (4 konfigurime fikse; ruan GA dhe GA+LS)
 python run_experiments.py
+
+# Një instancë e vetme, por për të gjitha konfigurimet dhe seed-et
+python run_instance_experiments.py --input data/input/kosovo_tv_input.json
 ```
 
 ---
 
 ## Parametrat e Algoritmit Gjenetik
 
-**Burimi kryesor:** **[PARAMETRAT_GA.md](PARAMETRAT_GA.md)** — tabela përmbledhëse (23
-parametra), operatorët (block crossover, destroy–rebuild, tournament), kriteret e
-ndalimit (`time_limit_seconds` 300 s, `stale_lim` 50/60, pa target fitness), dhe
+**Burimi kryesor:** **[PARAMETRAT_GA.md](PARAMETRAT_GA.md)** — tabela përmbledhëse e
+parametrave, operatorët (block crossover, destroy–rebuild, tournament), kriteret e
+ndalimit (`time_limit_seconds` default 300 s, max 600 s, `stale_lim` 50/60, pa target fitness), dhe
 parametrat e nxjerrë nga magic numbers (`crossover_rate`, `mutation_rate`,
 `tournament_k`, `elite_fraction`, `stale_limit`, `destroy_rebuild_rate`,
 `block_crossover_rate`, `polish_rounds`).
@@ -122,12 +122,13 @@ lidhja me kohën, diversitetin dhe fitness-in.
 
 | Parametri (kodi) | CLI Flag | Shënim |
 |------------------|----------|--------|
-| `population_size` | `--ga-population` | Në kodin e scheduler-it default tipik **60** (adaptive 15–60 sipas kanaleve); `main.py` ka default tjetër — përdorni flag për përputhje me dokumentin. |
+| `population_size` | `--ga-population` | Default **60**; scheduler-i mund ta ulë adaptivisht për instanca shumë të mëdha. |
 | `crossover_rate` | `--ga-crossover-rate` | Adaptive në kod kur `None`: 0.55 (>100 ch) / 0.65 (≤100 ch). |
 | `mutation_rate` | `--ga-mutation-rate` | Adaptive kur `None`: 0.50 / 0.40. |
-| `tournament_k` | `--ga-tournament` | Adaptive kur `None`: 5 / 3. |
+| `tournament_k` | `--ga-tournament` | Default **5**. |
 | `elite_fraction` | `--ga-elite` | Jepet si **numër** elitësh; në kod llogaritet `elite_fraction = ga_elite / population`. Për 20% me pop 60: `--ga-elite 12`. |
-| `time_limit` | `--time-limit` | Max 300 s në këtë build. |
+| `time_limit` | `--time-limit` | Max 600 s në këtë build; default 300 s. |
+| `local_search_budget_seconds` | `--ls-budget` | Kohë e rezervuar për Local Search pas GA-së; default 30 s. |
 | `seed` | `--seed` | Reproduktibilitet (default në dokument: 42 ku përdoret). |
 | `lookahead_limit` | `--lookahead` | Default 6 në dokument dhe eksperimente. |
 | `density_percentile` | `--density-percentile` | Default 25. |
@@ -204,7 +205,12 @@ Në të katër konfigurimet `block_crossover_rate` është i njëjtë (0.88), pr
 
 ### Rezultatet
 
-Rezultatet e plota ndodhen në `results/all_results.csv` dhe `results/summary.csv`.
+Rezultatet e plota ndodhen në `results/all_results.csv`. Skripti i eksperimenteve
+gjeneron edhe `results/summary.csv` në fund të ekzekutimit; në folderin aktual
+janë ruajtur edhe përmbledhjet për instanca (`results/<instance>_summary.csv`).
+CSV-të e rezultateve mbajnë vetëm kolonat `config`, `instance`, `seed`, `score`,
+`segments`, `time_s`, `GA+LS` dhe `improvement`. Kolona `score` është rezultati
+i GA-së para Local Search, ndërsa `GA+LS` është rezultati pas Local Search.
 
 Per cdo ekzekutim ruhet edhe zgjidhja JSON në `data/output/`.
 

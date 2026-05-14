@@ -437,14 +437,16 @@ përmirësimin evolucionar.
 
 ---
 
-### 20. Final Reserve — `_FINAL_RESERVE_S`
+### 20. Local Search pas GA — `local_search_budget_seconds`
 
-| Vlera | **4.0 sekonda** |
-|-------|-----------------|
-| **Vendndodhja** | `ApexUpgradedScheduler`, rreshti 29 |
+| Vlera | **30 sekonda në eksperimente** (`--ls-budget 30`) |
+|-------|----------------------------------------------------|
+| **Vendndodhja** | `ApexUpgradedScheduler._local_search()` |
 
-Kohë e rezervuar në fund për **polishing** — destroy–rebuild e fundit
-mbi zgjidhjen më të mirë.
+Pas përfundimit të GA-së, ruhet rezultati **GA**, pastaj zgjidhja më e mirë
+përmirësohet me **Local Search** të kufizuar me kohë. Raportimi ruan
+kolonat kompakte `score`, `GA+LS` dhe `improvement`, që të shihet qartë
+përmirësimi nga GA në GA+LS.
 
 ---
 
@@ -504,7 +506,9 @@ sipas madhësisë së instancës). Kur jepet vlerë eksplicite, ajo mbizotëron.
 |----------------|------|---------|---------------------------|
 | `destroy_rebuild_rate` | `float` | `0.78` | `_mutate()` rreshti 390 |
 | `block_crossover_rate` | `float` | `0.88` | `_crossover()` rreshti 446 |
-| `polish_rounds` | `Optional[int]` | `None` → 2/3 adaptive | `_final_polish()` rreshti 481 |
+| `polish_rounds` | `Optional[int]` | `None` → 7/12 adaptive | Numri maksimal i pass-eve në `_local_search()` |
+| `local_search_budget_seconds` | `Optional[float]` | `30` në eksperimente | Rezerva kohore për Local Search pas GA |
+| `local_search_fraction` | `float` | `0.10` | Rezervë adaptive kur nuk jepet buxhet eksplicit |
 
 ---
 
@@ -531,10 +535,10 @@ sipas madhësisë së instancës). Kur jepet vlerë eksplicite, ajo mbizotëron.
 | 17 | Stale Limit | 50 / 60 | `stale_limit` | PO (tani) | GA klasik |
 | 18 | Beam Params (window) | max_segs, beam_w, max_exp | Adaptive | JO (internal) | Problem-specifik |
 | 19 | Beam Width (seed) | 0–200 | Adaptive | JO (internal) | Problem-specifik |
-| 20 | Final Reserve | 4.0s | `_FINAL_RESERVE_S` | JO (konstante) | Problem-specifik |
+| 20 | Local Search Budget | 30s në eksperimente | `local_search_budget_seconds` | PO | Problem-specifik |
 | 21 | Penalitetet (instance) | switch_pen, term_pen, etc. | Nga inputi | JO | Constraint |
 | 22 | Pen Ratio → _fw, _fb | Derivuar | Adaptive | JO | Problem-specifik |
-| 23 | Polish Rounds | 2 / 3 | `polish_rounds` | PO (tani) | Problem-specifik |
+| 23 | Local Search Passes | 7 / 12 | `polish_rounds` | PO (tani) | Problem-specifik |
 
 ---
 
@@ -568,9 +572,9 @@ sipas madhësisë së instancës). Kur jepet vlerë eksplicite, ajo mbizotëron.
 │  └─────────────┬───────────────┘         │
 │                │                         │
 │  ┌─────────────▼───────────────┐         │
-│  │ _final_polish() (#20)       │         │
-│  │  2–3 raunde destroy–rebuild │         │
-│  │  në kohën e rezervuar (4s)  │         │
+│  │ _local_search() (#20)       │         │
+│  │  ruan GA, pastaj GA+LS      │         │
+│  │  improvement = GA+LS − GA   │         │
 │  └─────────────┬───────────────┘         │
 │                │                         │
 │                ▼                         │
