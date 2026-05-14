@@ -22,6 +22,7 @@ from typing import List, Optional, Set, Tuple, Dict
 from models.schedule import Schedule
 from models.solution import Solution
 from scheduler.beam_search_scheduler import BeamSearchScheduler
+from utils.debug_breakpoints import debug_breakpoint
 
 
 class ApexScheduler(BeamSearchScheduler):
@@ -42,6 +43,12 @@ class ApexScheduler(BeamSearchScheduler):
         density_percentile: int = 25,
         verbose: bool = True,
     ):
+        debug_breakpoint(
+            "ApexScheduler.__init__",
+            channels=len(instance_data.channels),
+            time_limit_seconds=time_limit_seconds,
+            population_size=population_size,
+        )
         super().__init__(
             instance_data=instance_data,
             beam_width=1,
@@ -73,6 +80,12 @@ class ApexScheduler(BeamSearchScheduler):
 
     # --------------------------------------------------------- preprocessing
     def _apex_build(self):
+        debug_breakpoint(
+            "ApexScheduler._apex_build.start",
+            switch_penalty=self.instance_data.switch_penalty,
+            termination_penalty=self.instance_data.termination_penalty,
+            max_consecutive_genre=self.instance_data.max_consecutive_genre,
+        )
         d = self.instance_data
         self._sp = d.switch_penalty
         self._tp = d.termination_penalty
@@ -113,6 +126,12 @@ class ApexScheduler(BeamSearchScheduler):
             self.pop_size = min(self.pop_size, 25)
         elif self.n_channels > 500:
             self.pop_size = min(self.pop_size, 40)
+        debug_breakpoint(
+            "ApexScheduler._apex_build.end",
+            penalty_ratio=round(self._pen_ratio, 4),
+            preference_genres=sorted(self._pref_genres),
+            population_size=self.pop_size,
+        )
 
     # -------------------------------------------------------- pref helpers
     def _pref_for(self, genre: str, s: int, e: int) -> int:
@@ -235,6 +254,14 @@ class ApexScheduler(BeamSearchScheduler):
 
     # ========================================================== RANKING ====
     def _rank(self, cands, t, prev_ch, prev_genre, gs, strategy, used):
+        debug_breakpoint(
+            "ApexScheduler._rank",
+            candidates=len(cands),
+            time=t,
+            strategy=strategy,
+            prev_genre=prev_genre,
+            genre_streak=gs,
+        )
         scored = []
         aspm = self.avg_score_per_min
         close = self._close
@@ -332,6 +359,13 @@ class ApexScheduler(BeamSearchScheduler):
         time_limit=None,
         extend: bool = False,
     ) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._construct",
+            strategy=strategy,
+            alpha=alpha,
+            prefix_segments=len(prefix) if prefix else 0,
+            extend=extend,
+        )
         close = self._close
         mc = mc_override if mc_override is not None else self._mc
 
@@ -456,6 +490,12 @@ class ApexScheduler(BeamSearchScheduler):
 
     # =================================================== POPULATION SEED ===
     def _seed(self, budget: float) -> List[Solution]:
+        debug_breakpoint(
+            "ApexScheduler._seed.start",
+            budget=round(budget, 3),
+            population_size=self.pop_size,
+            channels=self.n_channels,
+        )
         deadline = _time.time() + budget
         pool: List[Solution] = []
 
@@ -556,16 +596,35 @@ class ApexScheduler(BeamSearchScheduler):
                 f"[best={kept[0].total_score} worst={kept[-1].total_score} "
                 f"t={self._elapsed():.1f}s]"
             )
+        debug_breakpoint(
+            "ApexScheduler._seed.end",
+            pool_size=len(pool),
+            kept=len(kept),
+            best=kept[0].total_score if kept else None,
+        )
         return kept
 
     # ======================================================== GA OPERATORS ==
     def _tournament(self, pop: List[Solution], k: int = 5) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._tournament",
+            population=len(pop),
+            k=k,
+            best=pop[0].total_score if pop else None,
+        )
         return max(
             self.rng.sample(pop, min(k, len(pop))),
             key=lambda s: s.total_score,
         )
 
     def _crossover(self, p1: Solution, p2: Solution) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._crossover",
+            parent1_score=p1.total_score,
+            parent2_score=p2.total_score,
+            parent1_segments=len(p1.scheduled_programs),
+            parent2_segments=len(p2.scheduled_programs),
+        )
         s1 = p1.scheduled_programs
         s2 = p2.scheduled_programs
         if len(s1) < 2 or len(s2) < 2:
@@ -582,6 +641,11 @@ class ApexScheduler(BeamSearchScheduler):
         return self._repair(prefix + suffix)
 
     def _mutate(self, sol: Solution) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._mutate",
+            score=sol.total_score,
+            segments=len(sol.scheduled_programs),
+        )
         progs = sol.scheduled_programs
         if len(progs) < 2:
             strat = self.rng.choice(["density", "chain", "balanced"])
@@ -620,6 +684,10 @@ class ApexScheduler(BeamSearchScheduler):
         return worst_idx
 
     def _repair(self, segments: List[Schedule]) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._repair",
+            incoming_segments=len(segments),
+        )
         if not segments:
             return self._construct(strategy="density", alpha=0.1)
         segments = sorted(segments, key=lambda s: s.start)
@@ -663,6 +731,12 @@ class ApexScheduler(BeamSearchScheduler):
 
     # ============================================================ GA LOOP ==
     def _ga(self, pop: List[Solution], budget: float) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler._ga.start",
+            population=len(pop),
+            budget=round(budget, 3),
+            best=pop[0].total_score if pop else None,
+        )
         deadline = _time.time() + budget
         elite_n = max(2, int(len(pop) * self.elite_fraction))
         best = pop[0]
@@ -707,10 +781,21 @@ class ApexScheduler(BeamSearchScheduler):
 
         if self.verbose:
             print(f"  GA: {gen} gens, best={best.total_score}")
+        debug_breakpoint(
+            "ApexScheduler._ga.end",
+            generations=gen,
+            best=best.total_score,
+            stale=stale,
+        )
         return best
 
     # ======================================================= ENTRY POINT ==
     def generate_solution(self) -> Solution:
+        debug_breakpoint(
+            "ApexScheduler.generate_solution",
+            time_limit=self.time_limit,
+            population_size=self.pop_size,
+        )
         self._t0 = _time.time()
 
         if self.verbose:

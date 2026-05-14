@@ -7,6 +7,7 @@ from models.instance_data import InstanceData
 from models.solution import Solution
 from models.schedule import Schedule
 from models.program import Program
+from utils.debug_breakpoints import debug_breakpoint
 
 
 class BeamSearchScheduler:
@@ -16,6 +17,12 @@ class BeamSearchScheduler:
                  lookahead_limit: int = 4,
                  density_percentile: int = 25,
                  verbose: bool = True):
+        debug_breakpoint(
+            "BeamSearchScheduler.__init__",
+            channels=len(instance_data.channels),
+            beam_width=beam_width,
+            lookahead_limit=lookahead_limit,
+        )
         self.instance_data = instance_data
         self.beam_width = beam_width
         self.lookahead_limit = lookahead_limit
@@ -27,6 +34,12 @@ class BeamSearchScheduler:
     
     def _preprocess(self):
         """Build all necessary indices."""
+        debug_breakpoint(
+            "BeamSearchScheduler._preprocess.start",
+            channels=len(self.instance_data.channels),
+            opening_time=self.instance_data.opening_time,
+            closing_time=self.instance_data.closing_time,
+        )
         self.n_channels = len(self.instance_data.channels)
         
         # Programs sorted by start time per channel
@@ -39,7 +52,7 @@ class BeamSearchScheduler:
         # Start time index for fast lookahead
         self.starts_at = defaultdict(list)
         
-        # All decision points (program boundaries)
+        # All decision points (program, priority, and preference boundaries)
         all_times = set()
         all_times.add(self.instance_data.opening_time)
         
@@ -53,6 +66,10 @@ class BeamSearchScheduler:
                 all_times.add(prog.end)
                 self.prog_by_id[prog.unique_id] = (prog, ch_idx)
                 self.starts_at[prog.start].append((prog, ch_idx))
+
+        for pref in self.instance_data.time_preferences:
+            all_times.add(pref.start)
+            all_times.add(pref.end)
         
         # Filter to valid range
         self.times = sorted([t for t in all_times 
@@ -124,6 +141,12 @@ class BeamSearchScheduler:
             
         if self.verbose:
             print(f"Average score density (top {self.density_percentile}%): {self.avg_score_per_min:.4f} pts/min")
+        debug_breakpoint(
+            "BeamSearchScheduler._preprocess.end",
+            decision_points=len(self.times),
+            programs=len(self.prog_by_id),
+            avg_score_per_min=round(self.avg_score_per_min, 4),
+        )
     
     def _get_prog(self, ch_idx: int, time: int) -> Optional[Program]:
         """Get program at time on channel (binary search)."""
@@ -167,6 +190,13 @@ class BeamSearchScheduler:
             seg_end: When we stop watching (can be before prog.end)
             prev_ch_id: Previous channel (for switch penalty)
         """
+        debug_breakpoint(
+            "BeamSearchScheduler._calc_score",
+            program_id=prog.program_id,
+            channel_index=ch_idx,
+            segment=(seg_start, seg_end),
+            prev_channel=prev_ch_id,
+        )
         duration = seg_end - seg_start
         if duration < self.min_d:
             return -999999
@@ -213,6 +243,14 @@ class BeamSearchScheduler:
         
         Returns: List of (score, ch_idx, ch_id, prog, seg_start, seg_end)
         """
+        debug_breakpoint(
+            "BeamSearchScheduler._get_candidates",
+            time=time,
+            prev_channel=prev_ch_id,
+            prev_genre=prev_genre,
+            genre_streak=genre_streak,
+            used_count=len(used_progs),
+        )
         candidates = []
         closing = self.instance_data.closing_time
         
@@ -327,6 +365,11 @@ class BeamSearchScheduler:
         Core beam search algorithm.
         Deterministic version.
         """
+        debug_breakpoint(
+            "BeamSearchScheduler._beam_search_core.start",
+            beam_width=self.beam_width,
+            decision_points=len(self.times),
+        )
         opening = self.instance_data.opening_time
         closing = self.instance_data.closing_time
         
@@ -422,10 +465,23 @@ class BeamSearchScheduler:
                     unique_program_id=prog_id
                 ))
         
-        return Solution(scheduled, best_solution[0])
+        result = Solution(scheduled, best_solution[0])
+        debug_breakpoint(
+            "BeamSearchScheduler._beam_search_core.end",
+            score=result.total_score,
+            segments=len(result.scheduled_programs),
+            iterations=iterations,
+        )
+        return result
     
     def _local_search(self, sol: Solution, max_iter: int = 50) -> Solution:
         """Improve solution with local search."""
+        debug_breakpoint(
+            "BeamSearchScheduler._local_search",
+            initial_score=sol.total_score,
+            segments=len(sol.scheduled_programs),
+            max_iter=max_iter,
+        )
         if not sol.scheduled_programs:
             return sol
         
@@ -508,6 +564,11 @@ class BeamSearchScheduler:
     
     def generate_solution(self) -> Solution:
         """Generate the maximum score solution."""
+        debug_breakpoint(
+            "BeamSearchScheduler.generate_solution",
+            channels=self.n_channels,
+            beam_width=self.beam_width,
+        )
         # Adaptive parameters for large instances
         if self.n_channels > 50:
             # Optimized: Set to 500 for good balance of speed and score

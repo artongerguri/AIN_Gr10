@@ -6,13 +6,15 @@ from models.instance_data import InstanceData
 from models.program import Program
 from models.priority_block import PriorityBlock
 from models.time_preference import TimePreference
+from utils.debug_breakpoints import debug_breakpoint
 
 
 class Parser:
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def     parse(self):
+    def parse(self):
+        debug_breakpoint("Parser.parse.start", file_path=self.file_path)
         try:
             with open(self.file_path, "r", encoding="utf-8", errors="ignore") as file:
                 data = json.load(file)
@@ -72,6 +74,12 @@ class Parser:
                 channels=channels
             )
 
+            debug_breakpoint(
+                "Parser.parse.end",
+                channels=len(channels),
+                priority_blocks=len(priority_blocks),
+                time_preferences=len(time_preferences),
+            )
             return instance
 
         except FileNotFoundError:
