@@ -1,0 +1,280 @@
+{
+    "scheduled_programs": [
+        {
+            "program_id": "raiitalia_us_l_estate_d_oro_i_success_2026-01-04_0000",
+            "channel_id": 8808,
+            "start": 0,
+            "end": 30
+        },
+        {
+            "program_id": "cwkpxj_us_jeopardy_2026-01-04_0030",
+            "channel_id": 1229,
+            "start": 30,
+            "end": 60
+        },
+        {
+            "program_id": "cbskclo_us_keloland_weekend_news_2026-01-04_0060",
+            "channel_id": 757,
+            "start": 60,
+            "end": 90
+        },
+        {
+            "program_id": "cbswivb_us_jeopardy_2026-01-04_0090",
+            "channel_id": 916,
+            "start": 90,
+            "end": 120
+        },
+        {
+            "program_id": "pbskidswestsocal_u_odd_squad_2026-01-04_0120",
+            "channel_id": 7955,
+            "start": 120,
+            "end": 150
+        },
+        {
+            "program_id": "14kjzz_us_jeopardy_2026-01-04_0150",
+            "channel_id": 0,
+            "start": 150,
+            "end": 180
+        },
+        {
+            "program_id": "14kjzz_us_nashville_insider_2026-01-04_0180",
+            "channel_id": 0,
+            "start": 180,
+            "end": 210
+        },
+        {
+            "program_id": "independentkdoc_us_first_century_foundation_2026-01-04_0210",
+            "channel_id": 5172,
+            "start": 210,
+            "end": 240
+        },
+        {
+            "program_id": "fanduelsportsnetwo_hawks_live_post_game_2026-01-04_0240",
+            "channel_id": 4400,
+            "start": 240,
+            "end": 270
+        },
+        {
+            "program_id": "aljazeera_us_counting_the_cost_2026-01-04_0270",
+            "channel_id": 310,
+            "start": 270,
+            "end": 300
+        },
+        {
+            "program_id": "tvlandpacific_us_seinfeld_2026-01-04_0300",
+            "channel_id": 9314,
+            "start": 300,
+            "end": 330
+        },
+        {
+            "program_id": "foxkcpq_us_the_backstage_experience_2026-01-04_0330",
+            "channel_id": 4155,
+            "start": 330,
+            "end": 360
+        },
+        {
+            "program_id": "vixpremiumdeportes_vix_premium_deportes_9_2026-01-04_0360",
+            "channel_id": 9861,
+            "start": 360,
+            "end": 390
+        },
+        {
+            "program_id": "cbskrex_us_the_outdoorsman_with_max_2026-01-04_0390",
+            "channel_id": 811,
+            "start": 390,
+            "end": 420
+        },
+        {
+            "program_id": "cbswwaydt2_us_the_neighborhood_2026-01-04_0420",
+            "channel_id": 974,
+            "start": 420,
+            "end": 450
+        },
+        {
+            "program_id": "abckgo_us_jeopardy_2026-01-04_0450",
+            "channel_id": 45,
+            "start": 450,
+            "end": 480
+        },
+        {
+            "program_id": "pbsweao_us_the_life_of_a_musician_2026-01-04_0480",
+            "channel_id": 7978,
+            "start": 480,
+            "end": 510
+        },
+        {
+            "program_id": "pbsweao_us_studio_c_sessions_2026-01-04_0510",
+            "channel_id": 7978,
+            "start": 510,
+            "end": 540
+        },
+        {
+            "program_id": "positiv_us_relieve_your_foot_pain_w_2026-01-04_0540",
+            "channel_id": 8672,
+            "start": 540,
+            "end": 570
+        },
+        {
+            "program_id": "nbcsouthfloridanew_south_florida_live_2026-01-04_0570",
+            "channel_id": 6150,
+            "start": 570,
+            "end": 600
+        },
+        {
+            "program_id": "cbswtkr_us_real_virginia_2026-01-04_0600",
+            "channel_id": 961,
+            "start": 600,
+            "end": 630
+        },
+        {
+            "program_id": "ctn_us_prophecy_watchers_2026-01-04_0630",
+            "channel_id": 1184,
+            "start": 630,
+            "end": 660
+        },
+        {
+            "program_id": "abcknoedt2_us_the_outdoorsman_with_max_2026-01-04_0660",
+            "channel_id": 66,
+            "start": 660,
+            "end": 690
+        },
+        {
+            "program_id": "abcwzzm_us_relieve_your_foot_pain_w_2026-01-04_0690",
+            "channel_id": 231,
+            "start": 690,
+            "end": 720
+        },
+        {
+            "program_id": "14kjzz_us_positively_america_with__2026-01-04_0720",
+            "channel_id": 0,
+            "start": 720,
+            "end": 750
+        },
+        {
+            "program_id": "14kjzz_us_small_town_big_deal_2026-01-04_0750",
+            "channel_id": 0,
+            "start": 750,
+            "end": 780
+        },
+        {
+            "program_id": "cwkucw_us_relieve_your_foot_pain_w_2026-01-04_0780",
+            "channel_id": 1240,
+            "start": 780,
+            "end": 810
+        },
+        {
+            "program_id": "nbcksl_us_wonderama_2026-01-04_0810",
+            "channel_id": 6108,
+            "start": 810,
+            "end": 840
+        },
+        {
+            "program_id": "worldwgbhdt2_us_gbh_news_rooted_2026-01-04_0840",
+            "channel_id": 9921,
+            "start": 840,
+            "end": 870
+        },
+        {
+            "program_id": "atlantas57watc_us_fully_alive_with_r_phill_2026-01-04_0870",
+            "channel_id": 475,
+            "start": 870,
+            "end": 900
+        },
+        {
+            "program_id": "tbspacific_us_impractical_jokers_2026-01-04_0900",
+            "channel_id": 9242,
+            "start": 900,
+            "end": 930
+        },
+        {
+            "program_id": "foxupwlucdt2_us_wardens_2026-01-04_0930",
+            "channel_id": 4891,
+            "start": 930,
+            "end": 960
+        },
+        {
+            "program_id": "foxwbocdt2_us_outdoors_delmarva_2026-01-04_0960",
+            "channel_id": 4248,
+            "start": 960,
+            "end": 990
+        },
+        {
+            "program_id": "pbskusm_us_america_s_heartland_2026-01-04_0990",
+            "channel_id": 7945,
+            "start": 990,
+            "end": 1020
+        },
+        {
+            "program_id": "pbskusm_us_washington_week_with_the_2026-01-04_1020",
+            "channel_id": 7945,
+            "start": 1020,
+            "end": 1050
+        },
+        {
+            "program_id": "abckvue_us_texas_country_reporter_2026-01-04_1050",
+            "channel_id": 104,
+            "start": 1050,
+            "end": 1080
+        },
+        {
+            "program_id": "abckrgv_us_special_edition_with_jer_2026-01-04_1080",
+            "channel_id": 78,
+            "start": 1080,
+            "end": 1110
+        },
+        {
+            "program_id": "abckifi_us_game_time_with_boomer_es_2026-01-04_1110",
+            "channel_id": 52,
+            "start": 1110,
+            "end": 1140
+        },
+        {
+            "program_id": "abckapp_us_sports_stars_of_tomorrow_2026-01-04_1140",
+            "channel_id": 23,
+            "start": 1140,
+            "end": 1170
+        },
+        {
+            "program_id": "awe_us_facing_waves_outriggers__2026-01-04_1170",
+            "channel_id": 291,
+            "start": 1170,
+            "end": 1200
+        },
+        {
+            "program_id": "23newswvua_us_wild_child_2026-01-04_1200",
+            "channel_id": 1,
+            "start": 1200,
+            "end": 1230
+        },
+        {
+            "program_id": "23newswvua_us_wild_child_2026-01-04_1230",
+            "channel_id": 1,
+            "start": 1230,
+            "end": 1260
+        },
+        {
+            "program_id": "23newswvua_us_beulah_baptist_church_of_2026-01-04_1260",
+            "channel_id": 1,
+            "start": 1260,
+            "end": 1290
+        },
+        {
+            "program_id": "23newswvua_us_miracle_deliverance_temp_2026-01-04_1290",
+            "channel_id": 1,
+            "start": 1290,
+            "end": 1320
+        },
+        {
+            "program_id": "23newswvua_us_tommy_wilcox_outdoors_2026-01-04_1320",
+            "channel_id": 1,
+            "start": 1320,
+            "end": 1350
+        },
+        {
+            "program_id": "23newswvua_us_paid_programming_2026-01-04_1350",
+            "channel_id": 1,
+            "start": 1350,
+            "end": 1380
+        }
+    ]
+}
